@@ -14,8 +14,9 @@
     "test:coverage:unit": "npm run test:unit -- --coverage",
     "test:coverage:integration": "npm run test:integration -- --coverage",
     "build": "tsc",
-    "execute": "ts-node src/server",
-    "serve:dev": "nodemon src/server.ts"
+    "start": "node dist/server.js",
+    "start:dev": "nodemon src/server.ts",
+    "postinstall": "npm run build"
   },
   "jestSonar": {
     "reportPath": "coverage",
