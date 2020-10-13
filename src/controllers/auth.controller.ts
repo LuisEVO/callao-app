@@ -23,7 +23,7 @@ export default class {
       const user = await this.userRepository.updateUserValidationCode(phone);
       const client = await Twilio.send(
         phone,
-        `App Callao: su código de validación es ${user.validationCode}`
+        `Alerta Callao: su código de validación es ${user.validationCode}`
       );
 
       return res.json({});
