@@ -1,5 +1,5 @@
 import express, { Application, Request, Response } from 'express';
-import { cors } from 'cors';
+import cors from 'cors';
 import { AuthController } from './controllers';
 import { ControllerRoute } from './interfaces';
 import { UserRepository } from './repositories';
