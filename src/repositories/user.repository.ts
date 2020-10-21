@@ -20,7 +20,7 @@ export default class extends GenericRepository<
   async updateUserValidationCode(phone: number): Promise<UserDocument> {
     const user: UserDocument = await User.findOne({ phone });
     user.validationCode = Math.floor(Math.random() * (9999 - 1111 + 1) + 1111);
-    user.validationExpirationDate = moment().add(2, 'minutes');
+    user.validationExpirationDate = moment().add(5, 'minutes');
     user.save()
     return user;
   }

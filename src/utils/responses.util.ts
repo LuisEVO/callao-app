@@ -2,8 +2,8 @@ import { Response } from 'express';
 import { IError } from '../interfaces';
 
 export default class {
-  static sentOk(res: Response) {
-    res.status(200).json();
+  static sentOk(res: Response, data?: object) {
+    res.status(200).json(data);
   }
 
   static sentErrorDatabase(res: Response, message: object) {
