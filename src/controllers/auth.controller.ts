@@ -43,7 +43,10 @@ export default class {
     } else if (moment().isSameOrAfter(user.validationExpirationDate)) {
       return Responses.sentError(res, `El código expiró`);
     } else if (validationCode === user.validationCode && moment().isBefore(user.validationExpirationDate)) {
-      return Responses.sentOk(res, { user: { nick: user.nick } });
+      return Responses.sentOk(res, { user: {
+        nick: user.nick,
+        phone: user.phone
+      } });
     }
   }
 
